@@ -9,13 +9,13 @@
 import UIKit
 
 protocol SceneDelegate : class {
-    func setSquareRec() -> (x: Int, y: Int, width: CGFloat, Height: CGFloat)
+    func setSquareRec() -> (x: Int, y: Int, width: CGFloat, height: CGFloat)
 }
 
 class ViewController: UIViewController, SceneDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-    
+        
     let scene = Scene()
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController, SceneDelegate {
         self.view.addSubview(scene)
     }
     
-    func setSquareRec() -> (x: Int, y: Int, width: CGFloat, Height: CGFloat) {
+    func setSquareRec() -> (x: Int, y: Int, width: CGFloat, height: CGFloat) {
         return (Int(self.imageView.bounds.minX), Int(self.imageView.bounds.minY), self.imageView.frame.width, self.imageView.frame.height)
     }
 
